@@ -1,4 +1,4 @@
-import { consult } from "../database/connection.js";
+import {consult} from "../database/connection.js";
 
 class SelecaoRepository {
   //CRUD
