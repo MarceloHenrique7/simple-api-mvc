@@ -1,20 +1,10 @@
 import express from "express";
-
-import SelecaoController from "./app/controllers/SelecaoController.js";
+import routes from "./routes.js";
 
 const app = express();
 
 app.use(express.json());
-
-// ROTAS
-app.get("/selecoes", SelecaoController.index);
-
-app.get("/selecoes/:id", SelecaoController.show);
-
-app.post("/selecoes", SelecaoController.store);
-
-app.delete("/selecoes/:id", SelecaoController.delete);
-
-app.put("/selecoes/:id", SelecaoController.update);
+// usar o router
+app.use(routes);
 
 export default app;
